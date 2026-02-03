@@ -186,8 +186,7 @@ Signals a PROGRAM-ERROR is the lambda-list is malformed."
              (check-variable (elt what &optional (allow-specializers allow-specializers))
                (unless (and (or (symbolp elt)
                                 (and allow-specializers
-                                     (consp elt) (= 2 (length elt)) (symbolp (first elt))))
-                            (not (constantp elt)))
+                                     (consp elt) (= 2 (length elt)) (symbolp (first elt)))))
                  (simple-program-error "Invalid ~A ~S in ordinary lambda-list:~%  ~S"
                                        what elt lambda-list)))
              (check-spec (spec what)
