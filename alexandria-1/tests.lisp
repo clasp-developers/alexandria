@@ -2089,3 +2089,10 @@
            (not aux)
            (eq t keyp)))
   t)
+
+(deftest parse-ordinary-lambda-list.2
+  (handler-case
+      (parse-ordinary-lambda-list '((symbol-name t))
+                                  :allow-specializers t)
+    (:no-error (&rest vals) (declare (ignore vals)) :no-error))
+  :no-error)
