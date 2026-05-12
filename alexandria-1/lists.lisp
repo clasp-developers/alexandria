@@ -180,7 +180,7 @@ destructively modifying it and saves back the result into the place.")
 
 (deftype proper-list ()
   "Type designator for proper lists. Implemented as a SATISFIES type, hence
-not recommended for performance intensive use. Main usefullness as a type
+not recommended for performance intensive use. Main usefulness as a type
 designator of the expected type in a TYPE-ERROR."
   `(and list (satisfies proper-list-p)))
 
@@ -241,7 +241,7 @@ list."
 
 (deftype circular-list ()
   "Type designator for circular lists. Implemented as a SATISFIES type, so not
-recommended for performance intensive use. Main usefullness as the
+recommended for performance intensive use. Main usefulness as the
 expected-type designator of a TYPE-ERROR."
   `(satisfies circular-list-p))
 
